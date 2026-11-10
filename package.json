@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rollup/rollup-win32-x64-msvc": "^4.68.2",
     "fdir": "^6.5.0",
     "framer-motion": "^11.18.2",
     "gsap": "^3.15.1",
