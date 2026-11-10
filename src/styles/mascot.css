@@ -1,0 +1,30 @@
+/* Mascot Scroll CSS - AGSAR Electromechanical Engineering LLP */
+
+.mascot-scroll-container {
+  position: fixed;
+  pointer-events: none;
+  z-index: 50; /* Above page content, below navbar (z-100) and modals */
+  will-change: transform, opacity;
+  transform-origin: center bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.mascot-canvas {
+  display: block;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 12px 24px rgba(9, 43, 69, 0.12));
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .mascot-scroll-container {
+    transition: none !important;
+  }
+}
+

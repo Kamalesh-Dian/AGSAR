@@ -1,0 +1,41 @@
+:root {
+  /* Ground is ONE value */
+  --ground: #ffffff;
+  --ground-subtle: #f8fafc;
+  --surface: #ffffff;
+  --surface-border: #e2e8f0;
+
+  /* Structure & Text */
+  --text-primary: #0a192f;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --blue-primary: #0b3b60;
+  --blue-hover: #072740;
+
+  /* Accent is ONE value - used three times or fewer */
+  --accent: #d92534;
+  --accent-hover: #b91c1c;
+
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Exact Measurements - Values, not adjectives */
+  --container-width: 1200px;
+  --nav-height: 72px;
+  --radius: 0px; /* Sharp architectural borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --border-width: 1px;
+
+  /* Backwards compatibility aliases for existing component styling */
+  --color-primary-blue: #0b3b60;
+  --color-corporate-blue: #0b3b60;
+  --color-accent-red: #d92534;
+  --color-white: #ffffff;
+  --color-light-bg: #ffffff;
+  --color-subtle-bg: #f8fafc;
+  --color-dark-text: #0a192f;
+  --color-text-muted: #536b82;
+  --color-border: #e2e8f0;
+}
