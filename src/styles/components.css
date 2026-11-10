@@ -179,6 +179,17 @@
   background-color: #0a192f;
 }
 
+.hero-container {
+  padding: 32px;
+  width: 100%;
+  height: auto;
+  background: rgba(125, 170, 204, 0.20); /* Dark Navy with transparency */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
 .hero-video-bg {
   position: absolute;
   top: 0;
@@ -187,7 +198,6 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.45;
 }
 
 .hero-overlay {
@@ -247,7 +257,7 @@
 }
 
 .hero-desc {
-  color: #cbd5e1;
+  color: #ffffff;
   font-size: 1.125rem;
   line-height: 1.7;
   margin-bottom: 36px;

@@ -37,37 +37,48 @@ export const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="hero-tracker">
-            <span className="tracker-dot" />
-            <span>ENGINEERING A SUSTAINABLE FUTURE</span>
-          </div>
+          <div className="hero-container">
+            <div className="hero-tracker">
+              <span className="tracker-dot" />
+              <span>ENGINEERING A SUSTAINABLE FUTURE</span>
+            </div>
 
-          {/* Solid White Typography - Zero Gradient Text */}
-          <h1 className="hero-title">
-            Powering Progress. <br />
-            Engineering Tomorrow.
-          </h1>
+            {/* Solid White Typography - Zero Gradient Text */}
+            <h1 className="hero-title">
+              Powering Progress. <br />
+              Engineering Tomorrow.
+            </h1>
 
-          <p className="hero-desc">
-            Delivering reliable electromechanical engineering and innovative energy
-            solutions through technology, expertise, and sustainable practices.
-          </p>
+            <p className="hero-desc">
+              Delivering reliable electromechanical engineering and innovative
+              energy solutions through technology, expertise, and sustainable
+              practices.
+            </p>
 
-          <div className="hero-actions">
-            {/* Primary Accent Button with Super Interactive Magnetic Capsule */}
-            <a href="#services" className="btn btn-primary btn-lg" onClick={scrollToServices}>
-              <span>Explore Our Services</span>
-              <span className="btn-icon-capsule">
-                <ArrowRight size={16} />
-              </span>
-            </a>
+            <div className="hero-actions">
+              {/* Primary Accent Button with Super Interactive Magnetic Capsule */}
+              <a
+                href="#services"
+                className="btn btn-primary btn-lg"
+                onClick={scrollToServices}
+              >
+                <span>Explore Our Services</span>
+                <span className="btn-icon-capsule">
+                  <ArrowRight size={16} />
+                </span>
+              </a>
 
-            <a href="#contact" className="btn btn-outline btn-lg" onClick={scrollToContact}>
-              <span>Contact Us</span>
-              <span className="btn-icon-capsule">
-                <ArrowUpRight size={16} />
-              </span>
-            </a>
+              <a
+                href="#contact"
+                className="btn btn-outline btn-lg"
+                onClick={scrollToContact}
+              >
+                <span>Contact Us</span>
+                <span className="btn-icon-capsule">
+                  <ArrowUpRight size={16} />
+                </span>
+              </a>
+            </div>
           </div>
         </motion.div>
 
