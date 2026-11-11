@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream font-sans text-navy/80 antialiased;
+}
+
+::selection {
+  background: #e5483a;
+  color: #fffdf8;
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.28em] text-reddark;
+  }
+  .h2 {
+    @apply font-display text-4xl leading-[1.05] text-navy md:text-6xl;
+  }
+  .field {
+    @apply w-full rounded-2xl border border-navy/15 bg-panel px-4 py-3 text-navy outline-none transition placeholder:text-navy/40 focus:border-blue focus:ring-2 focus:ring-blue/20;
+  }
+}
+
+/* Turbine blades: group includes an invisible circle so its box centre is the hub */
+@keyframes spin-blades {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.blades {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin-blades var(--d, 14s) linear infinite;
+}
+
+/* Solar panel glints */
+@keyframes panel-glint {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.glint {
+  animation: panel-glint 6s ease-in-out infinite;
+}
+
+/* Sun glow breathing */
+@keyframes sun-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+.sun-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sun-breathe 7s ease-in-out infinite;
+}
+
+/* Drifting clouds: continuous left-to-right sky travel */
+@keyframes cloud-move-right {
+  from {
+    transform: translateX(-420px);
+  }
+  to {
+    transform: translateX(1500px);
+  }
+}
+.cloud {
+  animation: cloud-move-right 60s linear infinite;
+  will-change: transform;
+}
+
+/* Sector strip */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 36s linear infinite;
+}
+
+/* Process timeline dots (dark section) */
+.step-dot {
+  transition: background 0.4s, box-shadow 0.4s, transform 0.4s;
+}
+.step-dot.is-on {
+  background: #e5483a;
+  border-color: #e5483a;
+  box-shadow: 0 0 0 6px rgba(229, 72, 58, 0.22), 0 0 24px rgba(229, 72, 58, 0.65);
+  transform: scale(1.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .blades,
+  .glint,
+  .sun-glow,
+  .cloud,
+  .marquee-track {
+    animation: none;
+  }
+}
